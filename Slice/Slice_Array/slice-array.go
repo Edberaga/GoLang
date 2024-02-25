@@ -25,7 +25,7 @@ func main() {
 
 	//Now lets try Slice
 	ages := [4]string{"Warrior", "Mage", "Rogue", "Cleric"}
-	anotherAge := ages[0:len(ages)] //Here's how Slice duplicate an array, can write ages[0:4] but this better
+	anotherAge := ages[0:4] //Here's how Slice duplicate an array, can write ages[0:len(ages)] but this better
 	fmt.Println("Array Values: ", ages)
 	fmt.Println("Slice Values: ", anotherAge)
 
