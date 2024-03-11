@@ -9,8 +9,15 @@ func (c Celcius) toFahrenhiet() float64 {
 	return float64(c * 9 / 5 + 32)
 }
 
+func (c *Celcius) add(value float64) {
+	//*c += value Note: its error because it only can be add with the same type...
+	*c += Celcius(value) 
+}
+
 func main() {
 	var derajat Celcius = 20.0
 	fmt.Println("Derajat Celcius: ", derajat)
 	fmt.Println("Derajat Fahrenhit: ", derajat.toFahrenhiet())
+	derajat.add(5)
+	fmt.Println("Derjat Sekarang: ", derajat.toFahrenhiet())
 }
