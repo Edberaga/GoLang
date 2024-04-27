@@ -51,7 +51,7 @@ func main() {
 
 func potongBamboo(potongan int, bamboo []int) {
 	for i := 0; i < potongan; i++ {
-		fmt.Println("Potongan ke- ", i + 1)
+		fmt.Println("Potongan ke-", i + 1)
 		for j := 0; j < len(bamboo); j++ {
 			if(bamboo[j] <= 0) {
 				fmt.Println(bamboo[j])
