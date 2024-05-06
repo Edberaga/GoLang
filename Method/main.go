@@ -12,7 +12,7 @@ func(t triangle) area() float64 {
 }
 
 /*Pass By Values
-func(t *triangle) increaseSize(n float64) {
+func(t triangle) increaseSize(n float64) {
 	t.base += n
 	t.height += n
 	fmt.Printf("Size has been increased for %.0f\nTriangle size now: \nbase: %.2f\nheight: %.2f\n", n, t.base, t.height)
