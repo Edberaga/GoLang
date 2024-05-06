@@ -11,10 +11,19 @@ func(t triangle) area() float64 {
 	return 0.5 * t.base * t.height
 }
 
-func(t triangle) increaseSize(n float64) {
+/*Pass By Values
+func(t *triangle) increaseSize(n float64) {
 	t.base += n
 	t.height += n
-	fmt.Printf("Size has been increased for %f.2\nTriangle size now: \nbase: %f.2\nheight: %f.2\n", n, t.base, t.height)
+	fmt.Printf("Size has been increased for %.0f\nTriangle size now: \nbase: %.2f\nheight: %.2f\n", n, t.base, t.height)
+}
+*/
+
+//Pass By References
+func(t *triangle) increaseSize(n float64) {
+	t.base += n
+	t.height += n
+	fmt.Printf("Size has been increased for %.0f\nTriangle size now: \nbase: %.2f\nheight: %.2f\n", n, t.base, t.height)
 }
 
 func main() {
