@@ -54,10 +54,17 @@ func loop() {
 	fmt.Println("Done Loop")
 }
 
+func lessonSix() {
+	defer fmt.Println("Pertama")
+	defer fmt.Println("Kedua")
+	defer fmt.Println("Terakhir")
+}
+
 func main() {
 	lessonOne() //Note: Introduction about Defer
 	lessonSecond() //Note: How defer only executed according to order, but not with any calculation
 	lessonThird() //Note: differ function as parameter will be ignored, and only the main function will be defered.
 	lessonFourth() //Note: Show that defer runs in LIFO
 	lessonFifth() //Note: show how differ Loop will run LIFO because thats how differ runs.
+	lessonSix()
 }
